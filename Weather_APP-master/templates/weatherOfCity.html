@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card" style="width: 40%; height: 500px; margin-top: 20px;">
+                <h1 class="text-center" style="margin-top: 20px;">{{ city_data[0] }}, {{ city_data[1] }}</h1>
+                <p class="text-center">{{ city_data[2] }}<span>&#176;</span>C</p>
+                <p class="text-center">{{ city_data[3] }}<span>&#176;</span>F</p>
+                <img src="{{url_for('static', filename=city_data[4])}}" align="middle" alt="Weather Condition Icon"/>
+                <p class="text-center">{{ city_data[5] }}</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
